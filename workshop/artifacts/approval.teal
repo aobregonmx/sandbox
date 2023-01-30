@@ -1,0 +1,91 @@
+#pragma version 8
+intcblock 0 1
+bytecblock 0x6e616d65
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l6
+txna ApplicationArgs 0
+pushbytes 0x121127a3 // "save_name(string)void"
+==
+bnz main_l5
+txna ApplicationArgs 0
+pushbytes 0x4294948f // "get_name()string"
+==
+bnz main_l4
+err
+main_l4:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub getname_2
+store 0
+pushbytes 0x151f7c75 // 0x151f7c75
+load 0
+concat
+log
+intc_1 // 1
+return
+main_l5:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+callsub savename_1
+intc_1 // 1
+return
+main_l6:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l8
+err
+main_l8:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+callsub create_0
+intc_1 // 1
+return
+
+// create
+create_0:
+proto 0 0
+intc_1 // 1
+return
+
+// save_name
+savename_1:
+proto 1 0
+bytec_0 // "name"
+frame_dig -1
+extract 2 0
+app_global_put
+retsub
+
+// get_name
+getname_2:
+proto 0 1
+pushbytes 0x // ""
+bytec_0 // "name"
+app_global_get
+frame_bury 0
+frame_dig 0
+len
+itob
+extract 6 0
+frame_dig 0
+concat
+frame_bury 0
+retsub

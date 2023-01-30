@@ -1,0 +1,48 @@
+{
+    "hints": {},
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMQpieXRlY2Jsb2NrIDB4NmU2MTZkNjUKdHhuIE51bUFwcEFyZ3MKaW50Y18wIC8vIDAKPT0KYm56IG1haW5fbDYKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHgxMjExMjdhMyAvLyAic2F2ZV9uYW1lKHN0cmluZyl2b2lkIgo9PQpibnogbWFpbl9sNQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDQyOTQ5NDhmIC8vICJnZXRfbmFtZSgpc3RyaW5nIgo9PQpibnogbWFpbl9sNAplcnIKbWFpbl9sNDoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiBnZXRuYW1lXzIKc3RvcmUgMApwdXNoYnl0ZXMgMHgxNTFmN2M3NSAvLyAweDE1MWY3Yzc1CmxvYWQgMApjb25jYXQKbG9nCmludGNfMSAvLyAxCnJldHVybgptYWluX2w1Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmNhbGxzdWIgc2F2ZW5hbWVfMQppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sNjoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQpibnogbWFpbl9sOAplcnIKbWFpbl9sODoKdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKPT0KYXNzZXJ0CmNhbGxzdWIgY3JlYXRlXzAKaW50Y18xIC8vIDEKcmV0dXJuCgovLyBjcmVhdGUKY3JlYXRlXzA6CnByb3RvIDAgMAppbnRjXzEgLy8gMQpyZXR1cm4KCi8vIHNhdmVfbmFtZQpzYXZlbmFtZV8xOgpwcm90byAxIDAKYnl0ZWNfMCAvLyAibmFtZSIKZnJhbWVfZGlnIC0xCmV4dHJhY3QgMiAwCmFwcF9nbG9iYWxfcHV0CnJldHN1YgoKLy8gZ2V0X25hbWUKZ2V0bmFtZV8yOgpwcm90byAwIDEKcHVzaGJ5dGVzIDB4IC8vICIiCmJ5dGVjXzAgLy8gIm5hbWUiCmFwcF9nbG9iYWxfZ2V0CmZyYW1lX2J1cnkgMApmcmFtZV9kaWcgMApsZW4KaXRvYgpleHRyYWN0IDYgMApmcmFtZV9kaWcgMApjb25jYXQKZnJhbWVfYnVyeSAwCnJldHN1Yg==",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "schema": {
+        "local": {
+            "declared": {},
+            "reserved": {}
+        },
+        "global": {
+            "declared": {
+                "name": {
+                    "type": "bytes",
+                    "key": "name",
+                    "descr": ""
+                }
+            },
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "SaveInfo",
+        "methods": [
+            {
+                "name": "save_name",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "name_in"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "get_name",
+                "args": [],
+                "returns": {
+                    "type": "string"
+                }
+            }
+        ],
+        "networks": {}
+    }
+}

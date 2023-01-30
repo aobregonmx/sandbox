@@ -342,3 +342,68 @@ Unfortunately prefixing all commands with `winpty` is not an option because `win
 The adopted solution is to use a pseudo-TTY only when absolutely required, that is when executing an interactive command such as `bash` inside `docker`.
 
 See comments around the commands `dc` and `dc_pty` in the file `sandbox`.
+
+## Notas del WorkShop Algorand Day de LaZonaTres
+
+Launchpad
+
+[https://github.com/algorand/sandbox](https://github.com/algorand/sandbox)
+
+One-stop solution to create & manage your Assets & NFT's on the Algorand blockchain.
+[https://algodesk.io/](https://algodesk.io/)
+
+Explorador de NFT
+
+[https://explorer.perawallet.app/](https://explorer.perawallet.app/)
+
+[https://testnet.explorer.perawallet.app/](https://testnet.explorer.perawallet.app/)
+
+[https://testnet.explorer.perawallet.app/assets/156509826/](https://testnet.explorer.perawallet.app/assets/156509826/)
+
+SDK en JS
+
+[https://algorand.github.io/js-algorand-sdk/](https://algorand.github.io/js-algorand-sdk/)
+
+AlgoKit es una herramienta para construir smartcontracts productivos (similar Openzeppelin en Ethereum)
+
+[https://github.com/algorandfoundation/algokit-cli](https://github.com/algorandfoundation/algokit-cli)
+
+Ecosistema y Apps
+
+[https://www.algorand.foundation/ecosystem](https://www.algorand.foundation/ecosystem)
+
+Nombre de Dominio en la red de algorand
+
+[https://nf.domains/](https://nf.domains/)
+
+Faucet Testnet
+
+[https://dispenser.testnet.aws.algodev.network/](https://dispenser.testnet.aws.algodev.network/)
+
+[https://bank.testnet.algorand.network/](https://bank.testnet.algorand.network/)
+
+
+```jsx
+#Iniciamos el docker con el nodo local de Algorand (like Ganache)
+>./sandbox up dev -v
+#Lista de cuentas del nodo
+>./sandbox goal account list
+
+#Beaker requiere que python > 3.10 
+>HISTFILE=/workspace/.gitpod/cmd-0 history -r; {
+pyenv install 3.10.7 && pyenv global 3.10.7
+}
+
+#https://algorand-devrel.github.io/beaker/html/index.html
+>pip install beaker-pyteal
+>pip3 install py-algorand-sdk
+
+#Compilar contract
+>python3 deploy.py
+
+#Interactuar con el contrato desplegado
+>curl "localhost:8980/v2/transactions?pretty"
+
+# Importar esta lib para trabajar con variables de entorno en python
+>pip install python-dotenv
+```

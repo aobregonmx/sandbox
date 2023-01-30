@@ -1,0 +1,25 @@
+{
+    "name": "SaveInfo",
+    "methods": [
+        {
+            "name": "save_name",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "name_in"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "get_name",
+            "args": [],
+            "returns": {
+                "type": "string"
+            }
+        }
+    ],
+    "networks": {}
+}

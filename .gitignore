@@ -5,3 +5,6 @@ data
 
 # emacs backup
 *~
+
+# Environment variables
+.env
